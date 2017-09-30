@@ -4,6 +4,7 @@
   "description": "DarkSky and Google Geocode proxy API for Thermo.city",
   "main": "server.js",
   "scripts": {
+    "deploy": "git push heroku master",
     "start": "nodemon server"
   },
   "repository": {
