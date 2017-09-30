@@ -1,8 +1,7 @@
-const app = require("express");
-const router = app.Router();
+const router  = require("express").Router();
 const request = require("request");
 const apiRoot = process.env.GOOGLE_GEOCODE_API_URL;
-const apiKey = process.env.GOOGLE_GEOCODE_API_KEY;
+const apiKey  = process.env.GOOGLE_GEOCODE_API_KEY;
 
 router.get("/", (req, res, next) => {
   const url = `${apiRoot}?latlng=${req.query.coords}&result_type=neighborhood&key=${apiKey}`;
