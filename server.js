@@ -2,7 +2,7 @@ const app = require("express")();
 const cors = require("cors");
 const config = require("dotenv").config();
 const routes = require("./routes");
-const port = config.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("Thermo City API: Home");
