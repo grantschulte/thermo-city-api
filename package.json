@@ -1,0 +1,28 @@
+{
+  "name": "thermo-city-api",
+  "version": "0.0.1",
+  "description": "DarkSky and Google Geocode proxy API for Thermo.city",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantschulte/thermo-city-api.git"
+  },
+  "author": "Grant J. Schulte <schulte.grant@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grantschulte/thermo-city-api/issues"
+  },
+  "homepage": "https://github.com/grantschulte/thermo-city-api#readme",
+  "dependencies": {
+    "cors": "2.8.4",
+    "dotenv": "4.0.0",
+    "express": "4.16.1",
+    "nodemon": "1.12.1"
+  },
+  "engines": {
+    "node": "8.4.0"
+  }
+}
