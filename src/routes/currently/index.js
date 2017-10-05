@@ -4,7 +4,8 @@ const apiRoot = process.env.DS_API_URL;
 const apiKey  = process.env.DS_API_KEY;
 
 router.get("/", (req, res, next) => {
-  const url = `${apiRoot}/forecast/${apiKey}/${req.query.coords}`
+  const params = "?exclude=[minutely,daily,hourly,flags]";
+  const url = `${apiRoot}/forecast/${apiKey}/${req.query.coords}${params}`;
 
   request(url, (err, response, body) => {
     if (err) {

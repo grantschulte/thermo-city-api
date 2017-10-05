@@ -4,7 +4,7 @@ const apiRoot = process.env.DS_API_URL;
 const apiKey  = process.env.DS_API_KEY;
 
 router.get("/", (req, res, next) => {
-  const params = "?exclude=[currently,minutely,hourly,flags]";
+  const params = "?exclude=[currently,minutely,daily,flags]";
   const url = `${apiRoot}/forecast/${apiKey}/${req.query.coords}${params}`;
 
   request(url, (err, response, body) => {
@@ -13,7 +13,7 @@ router.get("/", (req, res, next) => {
     }
 
     let data = JSON.parse(body);
-    res.json(data.daily);
+    res.json(data.hourly);
   });
 });
 
